@@ -3,8 +3,8 @@ language:
   ui:
     chapter_name: ""
 rmd_files: [
-  "index.Rmd",
-  "setup.Rmd",
+  "Welcome.Rmd",
+  "Overview.Rmd",
   "write.Rmd",
   "Omics_wrangling.Rmd"]
 delete_merged_file: true 

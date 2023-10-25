@@ -1,0 +1,46 @@
+--- 
+title: "The data-wrangling and omics course for R novices"
+author: "Casper-Emil Tingskov Pedersen and Jonathan Thorsen"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+# output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: openscapes/series
+description: "A tutorial on how to do data-wrangling and analysing omics data"
+---
+
+# Welcome to this course {#welcome}
+
+This course will introduce you to data-wrangling and analysis of omics data.
+We start out by building an intuition for working with data in R/Rstudio and then plot our results.
+
+The best way to learn is to follow along with your own laptop, but all are welcome. The idea with this course is also that you can do your own selv-paced learning by going back to themes that are harder. 
+
+We'll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try some of the things you learn from the exercises on your own data.
+
+Before you begin, be sure you are all set up: see the prerequisites in #overview.
+
+Breakdown for the course:
+
+----
+
+**Course schedule:**
+
+```{r, echo =FALSE,results='asis'}
+library(knitr)
+df <- data.frame(
+  Time = c("9-10:30","10:35-12","13-14.30","14.35-16"),
+  Day1 = c("Data-Wrangling, an introduction", "Get your hands dirty with data-wrangling", "GGplot2, an introduction","Plotting visually please plots"),
+  Day2 = c("Modelling introduction and omics","Your own catwalk with omics","Machine learning introduction","Omics and machine learning")
+)
+
+# Use kable to create a table
+kable(df, format = "markdown")
+
+```
+
+----
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

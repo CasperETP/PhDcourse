@@ -8,3 +8,5 @@ publish-awesome-book
 moving-forward
 write
 analysis
+create-a-data-frame
+use-kable-to-create-a-table
