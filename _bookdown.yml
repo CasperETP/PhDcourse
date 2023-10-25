@@ -1,7 +1,7 @@
 book_filename: "series"
 language:
   ui:
-    chapter_name: "Theme "
+    chapter_name: ""
 rmd_files: [
   "index.Rmd",
   "setup.Rmd",

@@ -15,18 +15,19 @@ description: "A tutorial on how to do data-wrangling and analysing omics data"
 # Welcome to this course {#welcome}
 
 We are happy that you want to join us in this venture to learn about data-wranling and analysing omics data.
-A few things need to be checked before we start. First, you will need Rstudio, to install that go to
-[RStudio](https://www.rstudio.com/products/rstudio/download/)
+A few things need to be checked before we start. First, we assume that you have either [R](https://cloud.r-project.org/) or
+[RStudio](https://www.rstudio.com/products/rstudio/download/) installed.
 
-The best way to learn is to follow along with your own laptop, but all are welcome. We'll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try out
+The best way to learn is to follow along with your own laptop, but all are welcome. We'll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try some of the things you learn from the exercises on your own data.
 
-The goal of this course is to equip you with the tools to take a virgin dataset and do the following:
+The goal of this course today is to equip you with the tools to take a (your) dataset and do the following:
 
 1. Import data to R and understand the structure of your data
 1. Look at it using summaries and descriptive statistics
 1. Engineer features relevant for your research
 1. Impute missing data
-1. 
+1. To do transformation and understand what that means
+1. Plot the data using visually appealing and publish ready figures
 
 ----
 
