@@ -5,7 +5,7 @@ language:
 rmd_files: [
   "Welcome.Rmd",
   "Overview.Rmd",
-  "write.Rmd",
+  "basic_intro_data_in_R.Rmd",
   "Omics_wrangling.Rmd"]
 delete_merged_file: true 
 output_dir: "docs"

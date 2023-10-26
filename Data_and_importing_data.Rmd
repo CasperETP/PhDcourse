@@ -1,4 +1,7 @@
-# Setting up Bookdown {#setup}
+# Data importing and tidy data {#dataimport}
+
+
+
 
 The `bookdown` package and [book](https://bookdown.org/yihui/bookdown/get-started.html) is definitely the best way to get started. However, in practice I always find myself copying an existing, working book and modifying it instead of starting from scratch. So this tutorial is going to have you do that as well, using this book as the one you copy from.
 

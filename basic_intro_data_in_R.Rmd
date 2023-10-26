@@ -1,0 +1,103 @@
+
+# Super quick intro to data in R {#dataintro}
+
+## Install and load package
+
+library(tidyverse)
+library(broom)
+
+try using packages...
+```{r}
+```
+
+## Load in a dataset
+
+Open this link in a new tab by copy-pasting and save it to your computer using right-click (https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv). 
+Save it as "gapminder2017".
+
+### comma separated (csv)
+try read it in using read csv, the file ending is automatically put on there, so even though you did not name it gapminder2017.csv, that is the name it will get.
+```{r}
+gapminder2017 <-read.csv("~/241023_phdcourse/data/gapminder2017.csv")
+```
+
+### table (can be anything that has table structure)
+read.table
+
+library(gapminder)
+
+now load this dataset which has all the years, install it if you havent already
+
+## Data types in R
+
+Even though data types is a dull subject and therefore very hard to teach properly. It does serve an important purpose. Namely that you can figure out where error messages come from and which tools to use on which data 
+
+
+### variable naming
+my_variable <- 42
+
+this_function_does_great_stuff <- function() {}
+
+my_source_code_file_name <- "do_great_stuff.R"
+my_data_set_file_name    <- "my_data_set.RData"
+
+# R is a functional programming language, embrace copy on modify semantics
+x <- 3
+x <- x + 3 # Right side is evaluated and copied. X is not modified
+
+### R has the S4 object system, but this is not a true part of the R semantics.
+
+### Functions may input several variables (parameters), may return one variable
+my_adder_function <- function(parameter_1, parameter_2)
+{
+  return (parameter_1+parameter_2)
+}
+
+### All operators are functions
+3 + 3
+`+`(3,3)
+
+### Note how backticks `` is used for variable names that start with restricted characters - this goes for column names as well
+# Under the hood (C), all R-variables are vectors, arrays or lists
+x <- 3                            # Numeric vector
+y <- c("monday", "tuesday")       # Character vector
+z <- list(                        
+  "numbers"=c(1,3,4),
+  "days"=y
+)                                 # List (a vector of pointers to other vectors)
+head(iris)                        # Data frame: a list, with pointers to each column (and with some restrictions, e.g. type, length)
+
+
+
+
+```{r}
+```
+
+### Dataframe inspection
+
+## Data types in R
+## Data types in R
+## Data types in R
+
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
