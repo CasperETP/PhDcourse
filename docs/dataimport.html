@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>The data-wrangling and omics course for R novices</title>
+  <title>Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices</title>
   <meta name="description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="The data-wrangling and omics course for R novices" />
+  <meta property="og:title" content="Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="github-repo" content="openscapes/series" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The data-wrangling and omics course for R novices" />
+  <meta name="twitter:title" content="Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices" />
   
   <meta name="twitter:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"/>
 
-<link rel="next" href="overview.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -200,68 +200,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">The data-wrangling and omics course for R novices</h1>
-<p class="author"><em>Casper-Emil Tingskov Pedersen and Jonathan Thorsen</em></p>
-<p class="date"><em>2023-10-27</em></p>
+<div id="dataimport" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Data importing and tidy data<a href="dataimport.html#dataimport" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The <code>bookdown</code> package and <a href="https://bookdown.org/yihui/bookdown/get-started.html">book</a> is definitely the best way to get started. However, in practice I always find myself copying an existing, working book and modifying it instead of starting from scratch. So this tutorial is going to have you do that as well, using this book as the one you copy from.</p>
+<p>[more setup here]</p>
+<p>You will have to name your book’s repository. To differentiate your book’s repo name from this “bookdown-tutorial” repo, here we’ll call your book “awesome-book” <em>but you should consistently name it what you want to name it</em>.</p>
+<div id="get-bookdown-tutorial-going-on-your-local-computer" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Get “bookdown-tutorial” going on your local computer<a href="dataimport.html#get-bookdown-tutorial-going-on-your-local-computer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://github.com/jules32/bookdown-tutorial" class="uri">https://github.com/jules32/bookdown-tutorial</a></li>
+<li>Click the green “clone or download” button and DOWNLOAD ZIP.</li>
+<li>Locally on your computer, unzip the folder, save it in a reasonable place</li>
+<li>Rename 2 things from “bookdown-tutorial” to “awesome-book”. You can do this in the finder/windows explorer:</li>
+</ol>
+<ul>
+<li>the folder itself (that you just unzipped)</li>
+<li>the .Rproj file</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Double-click the .Rproj file to launch RStudio</li>
+<li>Install packages and restart</li>
+</ol>
+<ul>
+<li><code>install.packages("bookdown")</code><br />
+</li>
+<li><code>install.packages("usethis")</code><br />
+</li>
+<li>Use the menu item Session &gt; Restart R<br />
+</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Click on the Build tab in the top right pane</li>
+<li>Click on Build Book!</li>
+</ol>
+<p>Nice job! Now let’s make it yours, and connect it to GitHub.</p>
 </div>
-<div id="welcome" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome to this course<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This course will introduce you to data-wrangling and analysis of omics data.
-We start out by building an intuition for working with data in R/Rstudio and then plot our results.</p>
-<p>The best way to learn is to follow along with your own laptop, but all are welcome. The idea with this course is also that you can do your own selv-paced learning by going back to themes that are harder.</p>
-<p>We’ll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try some of the things you learn from the exercises on your own data.</p>
-<p>Before you begin, be sure you are all set up: see the prerequisites in #overview.</p>
-<p>Breakdown for the course:</p>
-<hr />
-<p><strong>Course schedule:</strong></p>
-<table>
-<colgroup>
-<col width="10%" />
-<col width="49%" />
-<col width="39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Time</th>
-<th align="left">Day1</th>
-<th align="left">Day2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">9-10:30</td>
-<td align="left">Data-Wrangling, an introduction</td>
-<td align="left">Modelling introduction and omics</td>
-</tr>
-<tr class="even">
-<td align="left">10:35-12</td>
-<td align="left">Get your hands dirty with data-wrangling</td>
-<td align="left">Your own catwalk with omics</td>
-</tr>
-<tr class="odd">
-<td align="left">13-14.30</td>
-<td align="left">GGplot2, an introduction</td>
-<td align="left">Machine learning introduction</td>
-</tr>
-<tr class="even">
-<td align="left">14.35-16</td>
-<td align="left">Plotting visually please plots</td>
-<td align="left">Omics and machine learning</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<div id="create-your-awesome-book-github-repo" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Create your “awesome-book” GitHub repo<a href="dataimport.html#create-your-awesome-book-github-repo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Go to your GitHub account: github.com/username</li>
+<li>Click on Repositories, and the green button “New” to create a new repo</li>
+<li>Name this new repo “awesome-book”</li>
+<li>DO NOT initialize this repo with a README</li>
+<li>Click the green “create repository” button — this will take you to your new repo</li>
+<li>Click the tiny “clone or download” button near the top and COPY URL</li>
+</ol>
+</div>
+<div id="turn-bookdown-tutorial-into-awesome-book" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Turn “bookdown-tutorial” into “awesome-book”<a href="dataimport.html#turn-bookdown-tutorial-into-awesome-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>The following is from Jenny Bryan’s <a href="https://happygitwithr.com/existing-github-last.html">Happy Git With R</a></em></p>
+<ol style="list-style-type: decimal">
+<li>Go back to RStudio, to your “awesome-book” project</li>
+<li>In the Console, type <code>usethis::use_git()</code> and say Yes to the two prompts. This will restart R and give you a new Git tab in the upper right pane.</li>
+<li>Now, click on the Terminal tab next to the Console tab.</li>
+<li>Type <code>git remote add origin &lt;paste your copied awesome-book github url here&gt;</code></li>
+<li>Type <code>git push --set-upstream origin master</code></li>
+</ol>
+</div>
+<div id="publish-awesome-book" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Publish “awesome-book”<a href="dataimport.html#publish-awesome-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Last steps!</p>
+<ol style="list-style-type: decimal">
+<li>Go back to github.com/username/“awesome-book” and refresh — our files should be there! But we want it to be a book published as <a href="https://username.github.io/awesome-book" class="uri">https://username.github.io/awesome-book</a>.</li>
+<li>Click Settings</li>
+<li>Scroll down to GitHub Settings</li>
+<li>Change the Source pulldown from “None” to “master branch /docs folder”</li>
+<li>It should say “Your site is ready to be published at <a href="https://username.github.io/awesome-book/" class="uri">https://username.github.io/awesome-book/</a>” — click the link to see!</li>
+</ol>
+<p>Now, you’re set — you just need to write your book.</p>
+</div>
+<div id="moving-forward" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Moving forward<a href="dataimport.html#moving-forward" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As you write your .Rmd files, build the book and commit all files, including the docs/ folder, and your published book will be updated!</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -292,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jules32/bookdown-tutorial/edit/master/index.Rmd",
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/Data_and_importing_data.Rmd",
 "text": "Edit"
 },
 "history": {

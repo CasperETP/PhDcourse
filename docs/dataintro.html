@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>The data-wrangling and omics course for R novices</title>
+  <title>Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices</title>
   <meta name="description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="The data-wrangling and omics course for R novices" />
+  <meta property="og:title" content="Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="github-repo" content="openscapes/series" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The data-wrangling and omics course for R novices" />
+  <meta name="twitter:title" content="Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices" />
   
   <meta name="twitter:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="overview.html"/>
+<link rel="prev" href="overview.html"/>
+<link rel="next" href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -200,68 +200,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">The data-wrangling and omics course for R novices</h1>
-<p class="author"><em>Casper-Emil Tingskov Pedersen and Jonathan Thorsen</em></p>
-<p class="date"><em>2023-10-27</em></p>
+<div id="dataintro" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Super quick intro to data in R<a href="dataintro.html#dataintro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="install-and-load-package" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Install and load package<a href="dataintro.html#install-and-load-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>library(tidyverse)
+library(broom)</p>
+<p>try using packages…</p>
 </div>
-<div id="welcome" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome to this course<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This course will introduce you to data-wrangling and analysis of omics data.
-We start out by building an intuition for working with data in R/Rstudio and then plot our results.</p>
-<p>The best way to learn is to follow along with your own laptop, but all are welcome. The idea with this course is also that you can do your own selv-paced learning by going back to themes that are harder.</p>
-<p>We’ll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try some of the things you learn from the exercises on your own data.</p>
-<p>Before you begin, be sure you are all set up: see the prerequisites in #overview.</p>
-<p>Breakdown for the course:</p>
-<hr />
-<p><strong>Course schedule:</strong></p>
-<table>
-<colgroup>
-<col width="10%" />
-<col width="49%" />
-<col width="39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Time</th>
-<th align="left">Day1</th>
-<th align="left">Day2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">9-10:30</td>
-<td align="left">Data-Wrangling, an introduction</td>
-<td align="left">Modelling introduction and omics</td>
-</tr>
-<tr class="even">
-<td align="left">10:35-12</td>
-<td align="left">Get your hands dirty with data-wrangling</td>
-<td align="left">Your own catwalk with omics</td>
-</tr>
-<tr class="odd">
-<td align="left">13-14.30</td>
-<td align="left">GGplot2, an introduction</td>
-<td align="left">Machine learning introduction</td>
-</tr>
-<tr class="even">
-<td align="left">14.35-16</td>
-<td align="left">Plotting visually please plots</td>
-<td align="left">Omics and machine learning</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-
+<div id="load-in-a-dataset" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Load in a dataset<a href="dataintro.html#load-in-a-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Open this link in a new tab by copy-pasting and save it to your computer using right-click (<a href="https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv" class="uri">https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv</a>).
+Save it as “gapminder2017”.</p>
+<div id="comma-separated-csv" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> comma separated (csv)<a href="dataintro.html#comma-separated-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>try read it in using read csv, the file ending is automatically put on there, so even though you did not name it gapminder2017.csv, that is the name it will get.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dataintro.html#cb1-1" aria-hidden="true" tabindex="-1"></a>gapminder2017 <span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/241023_phdcourse/data/gapminder2017.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="table-can-be-anything-that-has-table-structure" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> table (can be anything that has table structure)<a href="dataintro.html#table-can-be-anything-that-has-table-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>read.table</p>
+<p>library(gapminder)</p>
+<p>now load this dataset which has all the years, install it if you havent already</p>
+</div>
+</div>
+<div id="data-types-in-r" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Data types in R<a href="dataintro.html#data-types-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Even though data types is a dull subject and therefore very hard to teach properly. It does serve an important purpose. Namely that you can figure out where error messages come from and which tools to use on which data</p>
+<div id="variable-naming" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> variable naming<a href="dataintro.html#variable-naming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>my_variable &lt;- 42</p>
+<p>this_function_does_great_stuff &lt;- function() {}</p>
+<p>my_source_code_file_name &lt;- “do_great_stuff.R”
+my_data_set_file_name &lt;- “my_data_set.RData”</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -292,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jules32/bookdown-tutorial/edit/master/index.Rmd",
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/basic_intro_data_in_R.Rmd",
 "text": "Edit"
 },
 "history": {

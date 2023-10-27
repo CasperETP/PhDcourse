@@ -1,11 +1,11 @@
-book_filename: "series"
+book_filename: "data"
 language:
   ui:
-    chapter_name: ""
+    chapter_name: "Chapter "
 rmd_files: [
-  "Welcome.Rmd",
+  "index.Rmd",
   "Overview.Rmd",
   "basic_intro_data_in_R.Rmd",
-  "Omics_wrangling.Rmd"]
+  "Data_and_importing_data.Rmd"]
 delete_merged_file: true 
 output_dir: "docs"
