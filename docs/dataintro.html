@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices</title>
+  <title>Chapter 3 Super quick intro to coding and data in R | The data-wrangling and omics course for R novices</title>
   <meta name="description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices" />
+  <meta property="og:title" content="Chapter 3 Super quick intro to coding and data in R | The data-wrangling and omics course for R novices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="github-repo" content="openscapes/series" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Super quick intro to data in R | The data-wrangling and omics course for R novices" />
+  <meta name="twitter:title" content="Chapter 3 Super quick intro to coding and data in R | The data-wrangling and omics course for R novices" />
   
   <meta name="twitter:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="overview.html"/>
-<link rel="next" href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"/>
+<link rel="next" href="dataimport.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -146,42 +146,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6" data-path="overview.html"><a href="overview.html#prerequisites"><i class="fa fa-check"></i><b>2.6</b> Prerequisites</a></li>
 <li class="chapter" data-level="2.7" data-path="overview.html"><a href="overview.html#credit"><i class="fa fa-check"></i><b>2.7</b> Credit</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="dataintro.html"><a href="dataintro.html"><i class="fa fa-check"></i><b>3</b> Super quick intro to data in R</a>
+<li class="chapter" data-level="3" data-path="dataintro.html"><a href="dataintro.html"><i class="fa fa-check"></i><b>3</b> Super quick intro to coding and data in R</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.1</b> Install and load package</a></li>
-<li class="chapter" data-level="3.2" data-path="dataintro.html"><a href="dataintro.html#load-in-a-dataset"><i class="fa fa-check"></i><b>3.2</b> Load in a dataset</a>
+<li class="chapter" data-level="3.1" data-path="dataintro.html"><a href="dataintro.html#codingprogramming-in-r"><i class="fa fa-check"></i><b>3.1</b> Coding/programming in R</a></li>
+<li class="chapter" data-level="3.2" data-path="dataintro.html"><a href="dataintro.html#basic-terminology-in-r"><i class="fa fa-check"></i><b>3.2</b> Basic terminology in R</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="dataintro.html"><a href="dataintro.html#comma-separated-csv"><i class="fa fa-check"></i><b>3.2.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="3.2.2" data-path="dataintro.html"><a href="dataintro.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>3.2.2</b> table (can be anything that has table structure)</a></li>
+<li class="chapter" data-level="3.2.1" data-path="dataintro.html"><a href="dataintro.html#exercise1"><i class="fa fa-check"></i><b>3.2.1</b> Your turn</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#data-types-in-r"><i class="fa fa-check"></i><b>3.3</b> Data types in R</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="dataintro.html"><a href="dataintro.html#variable-naming"><i class="fa fa-check"></i><b>3.3.1</b> variable naming</a></li>
+<li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#error-messages"><i class="fa fa-check"></i><b>3.3</b> Error messages</a></li>
+<li class="chapter" data-level="3.4" data-path="dataintro.html"><a href="dataintro.html#coding-tips-and-tricks"><i class="fa fa-check"></i><b>3.4</b> Coding tips and tricks</a></li>
+<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><i class="fa fa-check"></i><b>4</b> R is a functional programming language, embrace copy on modify semantics</a>
+<li class="chapter" data-level="4" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>4</b> Data importing and tidy data</a>
 <ul>
-<li class="chapter" data-level="4.0.1" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#r-has-the-s4-object-system-but-this-is-not-a-true-part-of-the-r-semantics."><i class="fa fa-check"></i><b>4.0.1</b> R has the S4 object system, but this is not a true part of the R semantics.</a></li>
-<li class="chapter" data-level="4.0.2" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#functions-may-input-several-variables-parameters-may-return-one-variable"><i class="fa fa-check"></i><b>4.0.2</b> Functions may input several variables (parameters), may return one variable</a></li>
-<li class="chapter" data-level="4.0.3" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#all-operators-are-functions"><i class="fa fa-check"></i><b>4.0.3</b> All operators are functions</a></li>
-<li class="chapter" data-level="4.0.4" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#note-how-backticks-is-used-for-variable-names-that-start-with-restricted-characters---this-goes-for-column-names-as-well"><i class="fa fa-check"></i><b>4.0.4</b> Note how backticks `` is used for variable names that start with restricted characters - this goes for column names as well</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><i class="fa fa-check"></i><b>5</b> Under the hood (C), all R-variables are vectors, arrays or lists</a>
+<li class="chapter" data-level="4.1" data-path="dataimport.html"><a href="dataimport.html#load-in-a-dataset"><i class="fa fa-check"></i><b>4.1</b> Load in a dataset</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#dataframe-inspection"><i class="fa fa-check"></i><b>5.0.1</b> Dataframe inspection</a></li>
-<li class="chapter" data-level="5.1" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-1"><i class="fa fa-check"></i><b>5.1</b> Data types in R</a></li>
-<li class="chapter" data-level="5.2" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-2"><i class="fa fa-check"></i><b>5.2</b> Data types in R</a></li>
-<li class="chapter" data-level="5.3" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-3"><i class="fa fa-check"></i><b>5.3</b> Data types in R</a></li>
-<li class="chapter" data-level="5.4" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#r-markdown"><i class="fa fa-check"></i><b>5.4</b> R Markdown</a></li>
-<li class="chapter" data-level="5.5" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#including-plots"><i class="fa fa-check"></i><b>5.5</b> Including Plots</a></li>
+<li class="chapter" data-level="4.1.1" data-path="dataimport.html"><a href="dataimport.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.1.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="dataimport.html"><a href="dataimport.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.1.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>6</b> Data importing and tidy data</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="dataimport.html"><a href="dataimport.html#get-bookdown-tutorial-going-on-your-local-computer"><i class="fa fa-check"></i><b>6.1</b> Get “bookdown-tutorial” going on your local computer</a></li>
-<li class="chapter" data-level="6.2" data-path="dataimport.html"><a href="dataimport.html#create-your-awesome-book-github-repo"><i class="fa fa-check"></i><b>6.2</b> Create your “awesome-book” GitHub repo</a></li>
-<li class="chapter" data-level="6.3" data-path="dataimport.html"><a href="dataimport.html#turn-bookdown-tutorial-into-awesome-book"><i class="fa fa-check"></i><b>6.3</b> Turn “bookdown-tutorial” into “awesome-book”</a></li>
-<li class="chapter" data-level="6.4" data-path="dataimport.html"><a href="dataimport.html#publish-awesome-book"><i class="fa fa-check"></i><b>6.4</b> Publish “awesome-book”</a></li>
-<li class="chapter" data-level="6.5" data-path="dataimport.html"><a href="dataimport.html#moving-forward"><i class="fa fa-check"></i><b>6.5</b> Moving forward</a></li>
+<li class="chapter" data-level="4.2" data-path="dataimport.html"><a href="dataimport.html#data-types-in-r"><i class="fa fa-check"></i><b>4.2</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -201,39 +184,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="dataintro" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Super quick intro to data in R<a href="dataintro.html#dataintro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="install-and-load-package" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Install and load package<a href="dataintro.html#install-and-load-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>library(tidyverse)
-library(broom)</p>
-<p>try using packages…</p>
+<h1><span class="header-section-number">Chapter 3</span> Super quick intro to coding and data in R<a href="dataintro.html#dataintro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="codingprogramming-in-r" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Coding/programming in R<a href="dataintro.html#codingprogramming-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that you’re set up with R and RStudio, you are probably asking yourself, “OK. Now how do I use R?”. The first thing to note is that unlike other statistical software programs like Excel, SPSS, or Minitab that provide point-and-click interfaces, R is an interpreted language. This means you have to type in commands written in R code. In other words, you have to code/program in R. Note that we’ll use the terms “coding” and “programming” interchangeably throughout this course.</p>
+<p>While it is not required to be a seasoned coder/computer programmer to use R, there is still a set of basic programming concepts that new R users need to understand. Consequently, while this course is not focused on learning programming, you will still learn just enough of these basic programming concepts needed to explore and analyze data effectively.</p>
 </div>
-<div id="load-in-a-dataset" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Load in a dataset<a href="dataintro.html#load-in-a-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Open this link in a new tab by copy-pasting and save it to your computer using right-click (<a href="https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv" class="uri">https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv</a>).
-Save it as “gapminder2017”.</p>
-<div id="comma-separated-csv" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> comma separated (csv)<a href="dataintro.html#comma-separated-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>try read it in using read csv, the file ending is automatically put on there, so even though you did not name it gapminder2017.csv, that is the name it will get.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dataintro.html#cb1-1" aria-hidden="true" tabindex="-1"></a>gapminder2017 <span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/241023_phdcourse/data/gapminder2017.csv&quot;</span>)</span></code></pre></div>
+<div id="basic-terminology-in-r" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Basic terminology in R<a href="dataintro.html#basic-terminology-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now introduce some basic programming concepts and terminology. Instead of asking you to memorize all these concepts and terminology right now, we’ll guide you so that you’ll “learn by doing.” To help you learn, we will always use a different font to distinguish regular text from computer_code. Also we will go through a tiny bit of information and then ask you do a similar task on your computer.</p>
+<p><img src="https://www.analyticsvidhya.com/wp-content/uploads/2016/02/rstudio.jpg" /></p>
+<p>On this plot you can see the overview of Rstudio. This contains the following elements:</p>
+<p>Console pane: where you enter in commands.</p>
+<p>R script: Where you store your commands often in a text file.</p>
+<p>R environment: What objects are registered/loaded in the environment (we will get back to that).</p>
+<p>Graphical output: Where you can see figures that is produced by commands in the console.</p>
+<p><img src="https://sydney-informatics-hub.github.io/lessonbmc/fig/Rvariablesdata.jpg" /></p>
+<p>This figure shows some of the more important data types in R and how they relate to storing data in R.
+It seems simple when set up like this, but when you are coding and you need to find and error this figure is
+a good place to start.</p>
+<p>Vectors can be created by using the <code>c()</code> function in R. The c stands for concatenate.
+for example the following command creates a vector of integers 1,2,3,4:
+<code>my_vector &lt;- c(1,2,3,4)</code></p>
+<p>Matrices can be created by using the <code>matrix()</code> function in R. Matrices are great for doing calculations
+incredibly fast BUT they can only contain one type of data unlike dataframes. For example the following command creates a matrix with the same four integers 1,2,3,4:
+<code>my_matrix &lt;- matrix(c(1,2,3,4))</code> you can also rearrange the matrix so that it has two columns instead of one:
+<code>my_matrix &lt;- matrix(c(1,2,3,4),ncol=2)</code>
+you can look at your matrix by typing <code>my_matrix</code> in the console.</p>
+<p>Data frames is a way to store data containing both strings, integers, factors together. They are rectangular spreadsheets. Typically you have a dataset where the rows correspond tot eh observations/samples and the columns correspond to the variables that describe the observations. And this is the typical format when we analyse data. We can create a data frame in R with mixed data like this:
+<code>my_df &lt;- data.frame(int = c(1,2,3,4),names = c("Villy","Søren","Karl","Benny"))</code>.</p>
+<p><img src="https://help.displayr.com/hc/article_attachments/6719912862607" /></p>
+<p><em>Conditionals:</em></p>
+<p>Often we subset our data using conditions, e.g. we only want samples of our data frame that has a value in column 3 that is larger than X. Do this kind of subsetting, we use <em>conditionals</em>.</p>
+<p>For example, using the data frame from before, we can restrict rows to those that have a integer value larger than
+2 like this:
+<code>my_df[my_df$int &gt; 2,]</code> This will capture the last two rows of the data. Notice the comma, which is essential
+when indexing dataframes: everything before the comma is subsetting on rows while after the comma is for subsetting columns. We can also subset using equality using == (and NOT =, which is used for assignment). Here is an example using equality: <code>my_df[my_df$names == "Karl",]</code>.<br />
+The final example of a conditional is %in% which is not listed in the figure above but still very useful. This weirdly looking %in% is describing a function (which we will get back to and use later) which can search for overlaps e.g. in R:
+<code>my_df[my_df$names %in% c("Karl","Villy"),]</code> See here that we find the overlap between names in my_df and the provided vector and only showing the rows of the data frame where there is an overlap.</p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200411225124/f114-300x158.png" /></p>
+<p>Functions, also called commands: Functions perform tasks in R. They take in inputs called arguments and return outputs. You can either manually specify a function’s arguments or use the function’s default values.
+For example, the function <code>seq()</code> in R generates a sequence of numbers. If you just run <code>seq()</code> it will return the value 1. That doesn’t seem very useful! This is because the default arguments are set as <code>seq(from = 1, to = 1)</code>. Thus, if you don’t pass in different values for from and to to change this behavior, R just assumes all you want is the number 1. You can change the argument values by updating the values after the = sign. If we try out <code>seq(from = 2, to = 5)</code> we get the result 2 3 4 5 that we might expect.</p>
+<p>This list is by no means an exhaustive list of all the programming concepts and terminology needed to become a savvy R user; such a list would be so large it wouldn’t be very useful, especially for novices. Rather, we feel this is a minimally viable list of programming concepts and terminology you need to know before getting started. We feel that you can learn the rest as you go. Remember that your mastery of all of these concepts and terminology will build as you practice more and more.</p>
+<div id="exercise1" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Your turn<a href="dataintro.html#exercise1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Exercise 1.</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a dataframe with the following information (you pick the dataframe name):
+two column dataframe. One with the names:
+<code>c("Villy","Søren","Karl","Benny","Siri")</code> and One with the following grades:<code>c(100,20,40,30,60)</code>.</p></li>
+<li><p>Use the <code>mean()</code> function to calculate the mean for passing grades (&gt;30). There are many ways to do this
+but a hint is that we only need to run one command. you can always see more information about the function by writing
+<code>?mean</code> in your console.</p></li>
+</ol>
 </div>
-<div id="table-can-be-anything-that-has-table-structure" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> table (can be anything that has table structure)<a href="dataintro.html#table-can-be-anything-that-has-table-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>read.table</p>
-<p>library(gapminder)</p>
-<p>now load this dataset which has all the years, install it if you havent already</p>
 </div>
+<div id="error-messages" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Error messages<a href="dataintro.html#error-messages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One thing that intimidates new R and RStudio users is how it reports errors, warnings, and messages. R reports errors, warnings, and messages in a glaring red font, which makes it seem like it is scolding you. However, seeing red text in the console is not always bad.</p>
+<p>R will show red text in the console pane in three different situations:</p>
+<p><img src="https://www.rd.com/wp-content/uploads/2020/02/traffic-light-colors-GettyImages-689407322-MLedit.jpg?resize=700%2C467" /></p>
+<p>If the text starts with “Error”, figure out what’s causing it. Think of errors as a red traffic light: something is wrong!
+If the text starts with “Warning”, figure out if it’s something to worry about. For instance, if you get a warning about missing values in a scatterplot and you know there are missing values, you’re fine. If that’s surprising, look at your data and see what’s missing. Think of warnings as a yellow traffic light: everything is working fine, but watch out/pay attention.
+Otherwise, the text is just a message. Read it, wave back at R, and thank it for talking to you. Think of messages as a green traffic light: everything is working fine and keep on going!</p>
 </div>
-<div id="data-types-in-r" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Data types in R<a href="dataintro.html#data-types-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Even though data types is a dull subject and therefore very hard to teach properly. It does serve an important purpose. Namely that you can figure out where error messages come from and which tools to use on which data</p>
-<div id="variable-naming" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> variable naming<a href="dataintro.html#variable-naming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>my_variable &lt;- 42</p>
-<p>this_function_does_great_stuff &lt;- function() {}</p>
-<p>my_source_code_file_name &lt;- “do_great_stuff.R”
-my_data_set_file_name &lt;- “my_data_set.RData”</p>
+<div id="coding-tips-and-tricks" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Coding tips and tricks<a href="dataintro.html#coding-tips-and-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Learning to code/program is quite similar to learning a foreign language. It can be daunting and frustrating at first. Such frustrations are common and it is normal to feel discouraged as you learn. However, just as with learning a foreign language, if you put in the effort and are not afraid to make mistakes, anybody can learn and improve.</p>
+<p>Here are a few useful tips to keep in mind as you learn to program:</p>
+<p><img src="https://cdn.vox-cdn.com/thumbor/BKeBuV-Agjw4SaAA8Mbm1ptN7e0=/0x0:4032x3024/620x465/filters:focal(1693x1446:2337x2090):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59740845/sip_of_joy.17.jpg" /></p>
+<p><em>Remember that computers are not actually that smart</em>: You may think your computer or smartphone is “smart,” but really people spent a lot of time and energy designing them to appear “smart.” In reality, you have to tell a computer everything it needs to do. Furthermore, the instructions you give your computer can’t have any mistakes in them, nor can they be ambiguous in any way.</p>
+<p><em>Take the “copy, paste, and tweak” approach</em>: Especially when you learn your first programming language or you need to understand particularly complicated code, it is often much easier to take existing code that you know works and modify it to suit your ends. This is as opposed to trying to type out the code from scratch. We call this the “copy, paste, and tweak” approach. So early on, we suggest not trying to write code from memory, but rather take existing examples we have provided you, then copy, paste, and tweak them to suit your goals. After you start feeling more confident, you can slowly move away from this approach and write code from scratch. Think of the “copy, paste, and tweak” approach as training wheels for a child learning to ride a bike. After getting comfortable, they won’t need them anymore.</p>
+<p><em>The best way to learn to code is by doing:</em> Rather than learning to code for its own sake, we find that learning to code goes much smoother when you have a goal in mind or when you are working on a particular project, like analyzing data that you are interested in and that is important to you.<br />
+Practice is key!</p>
 </div>
+<div id="install-and-load-package" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Install and load package<a href="dataintro.html#install-and-load-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So we alluded to that the environment contains many objects and some of these objects come from packages. Packages
+in R is precalculated functions and useful tools to work with your data. Therefore, embrace packages and get familiar with some of them. Some of the more important ones we will use in this course are:
+<code>tidyverse</code> and <code>dplyr</code> for data massaging and wrangling and <code>ggplot 2</code> for visualizations.</p>
+<p><img src="https://moderndive.netlify.app/images/shutterstock/R_vs_R_packages.png" /></p>
+<p>So R is like a new mobile phone: while it has a certain amount of features when you use it for the first time, it doesn’t have everything. R packages are like the apps you can download onto your phone from Apple’s App Store or Android’s Google Play.</p>
+<p>Like an app on your smartphone, you need to install it first and the open it.</p>
+<p>if you try to load a package that is not installed you get an error for instance</p>
+<p><code>library(tidyverse)</code> and if not you know that tidyverse is installed</p>
+<p>To install the tidyverse package do the following:</p>
+<p><code>install.packages("tidyverse")</code></p>
+<p>and to load it subsequently, write <code>library(tidyverse)</code>.</p>
+<p>Now install <code>broom</code> , <code>tidyverse</code> and <code>dplyr</code>
+using this approach</p>
+
 </div>
 </div>
             </section>
@@ -242,7 +282,7 @@ my_data_set_file_name &lt;- “my_data_set.RData”</p>
         </div>
       </div>
 <a href="overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dataimport.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

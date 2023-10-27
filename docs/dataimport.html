@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices</title>
+  <title>Chapter 4 Data importing and tidy data | The data-wrangling and omics course for R novices</title>
   <meta name="description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices" />
+  <meta property="og:title" content="Chapter 4 Data importing and tidy data | The data-wrangling and omics course for R novices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="github-repo" content="openscapes/series" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Data importing and tidy data | The data-wrangling and omics course for R novices" />
+  <meta name="twitter:title" content="Chapter 4 Data importing and tidy data | The data-wrangling and omics course for R novices" />
   
   <meta name="twitter:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"/>
+<link rel="prev" href="dataintro.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -146,42 +146,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6" data-path="overview.html"><a href="overview.html#prerequisites"><i class="fa fa-check"></i><b>2.6</b> Prerequisites</a></li>
 <li class="chapter" data-level="2.7" data-path="overview.html"><a href="overview.html#credit"><i class="fa fa-check"></i><b>2.7</b> Credit</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="dataintro.html"><a href="dataintro.html"><i class="fa fa-check"></i><b>3</b> Super quick intro to data in R</a>
+<li class="chapter" data-level="3" data-path="dataintro.html"><a href="dataintro.html"><i class="fa fa-check"></i><b>3</b> Super quick intro to coding and data in R</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.1</b> Install and load package</a></li>
-<li class="chapter" data-level="3.2" data-path="dataintro.html"><a href="dataintro.html#load-in-a-dataset"><i class="fa fa-check"></i><b>3.2</b> Load in a dataset</a>
+<li class="chapter" data-level="3.1" data-path="dataintro.html"><a href="dataintro.html#codingprogramming-in-r"><i class="fa fa-check"></i><b>3.1</b> Coding/programming in R</a></li>
+<li class="chapter" data-level="3.2" data-path="dataintro.html"><a href="dataintro.html#basic-terminology-in-r"><i class="fa fa-check"></i><b>3.2</b> Basic terminology in R</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="dataintro.html"><a href="dataintro.html#comma-separated-csv"><i class="fa fa-check"></i><b>3.2.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="3.2.2" data-path="dataintro.html"><a href="dataintro.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>3.2.2</b> table (can be anything that has table structure)</a></li>
+<li class="chapter" data-level="3.2.1" data-path="dataintro.html"><a href="dataintro.html#exercise1"><i class="fa fa-check"></i><b>3.2.1</b> Your turn</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#data-types-in-r"><i class="fa fa-check"></i><b>3.3</b> Data types in R</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="dataintro.html"><a href="dataintro.html#variable-naming"><i class="fa fa-check"></i><b>3.3.1</b> variable naming</a></li>
+<li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#error-messages"><i class="fa fa-check"></i><b>3.3</b> Error messages</a></li>
+<li class="chapter" data-level="3.4" data-path="dataintro.html"><a href="dataintro.html#coding-tips-and-tricks"><i class="fa fa-check"></i><b>3.4</b> Coding tips and tricks</a></li>
+<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><i class="fa fa-check"></i><b>4</b> R is a functional programming language, embrace copy on modify semantics</a>
+<li class="chapter" data-level="4" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>4</b> Data importing and tidy data</a>
 <ul>
-<li class="chapter" data-level="4.0.1" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#r-has-the-s4-object-system-but-this-is-not-a-true-part-of-the-r-semantics."><i class="fa fa-check"></i><b>4.0.1</b> R has the S4 object system, but this is not a true part of the R semantics.</a></li>
-<li class="chapter" data-level="4.0.2" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#functions-may-input-several-variables-parameters-may-return-one-variable"><i class="fa fa-check"></i><b>4.0.2</b> Functions may input several variables (parameters), may return one variable</a></li>
-<li class="chapter" data-level="4.0.3" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#all-operators-are-functions"><i class="fa fa-check"></i><b>4.0.3</b> All operators are functions</a></li>
-<li class="chapter" data-level="4.0.4" data-path="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html"><a href="r-is-a-functional-programming-language-embrace-copy-on-modify-semantics.html#note-how-backticks-is-used-for-variable-names-that-start-with-restricted-characters---this-goes-for-column-names-as-well"><i class="fa fa-check"></i><b>4.0.4</b> Note how backticks `` is used for variable names that start with restricted characters - this goes for column names as well</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><i class="fa fa-check"></i><b>5</b> Under the hood (C), all R-variables are vectors, arrays or lists</a>
+<li class="chapter" data-level="4.1" data-path="dataimport.html"><a href="dataimport.html#load-in-a-dataset"><i class="fa fa-check"></i><b>4.1</b> Load in a dataset</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#dataframe-inspection"><i class="fa fa-check"></i><b>5.0.1</b> Dataframe inspection</a></li>
-<li class="chapter" data-level="5.1" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-1"><i class="fa fa-check"></i><b>5.1</b> Data types in R</a></li>
-<li class="chapter" data-level="5.2" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-2"><i class="fa fa-check"></i><b>5.2</b> Data types in R</a></li>
-<li class="chapter" data-level="5.3" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#data-types-in-r-3"><i class="fa fa-check"></i><b>5.3</b> Data types in R</a></li>
-<li class="chapter" data-level="5.4" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#r-markdown"><i class="fa fa-check"></i><b>5.4</b> R Markdown</a></li>
-<li class="chapter" data-level="5.5" data-path="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html"><a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html#including-plots"><i class="fa fa-check"></i><b>5.5</b> Including Plots</a></li>
+<li class="chapter" data-level="4.1.1" data-path="dataimport.html"><a href="dataimport.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.1.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="dataimport.html"><a href="dataimport.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.1.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>6</b> Data importing and tidy data</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="dataimport.html"><a href="dataimport.html#get-bookdown-tutorial-going-on-your-local-computer"><i class="fa fa-check"></i><b>6.1</b> Get “bookdown-tutorial” going on your local computer</a></li>
-<li class="chapter" data-level="6.2" data-path="dataimport.html"><a href="dataimport.html#create-your-awesome-book-github-repo"><i class="fa fa-check"></i><b>6.2</b> Create your “awesome-book” GitHub repo</a></li>
-<li class="chapter" data-level="6.3" data-path="dataimport.html"><a href="dataimport.html#turn-bookdown-tutorial-into-awesome-book"><i class="fa fa-check"></i><b>6.3</b> Turn “bookdown-tutorial” into “awesome-book”</a></li>
-<li class="chapter" data-level="6.4" data-path="dataimport.html"><a href="dataimport.html#publish-awesome-book"><i class="fa fa-check"></i><b>6.4</b> Publish “awesome-book”</a></li>
-<li class="chapter" data-level="6.5" data-path="dataimport.html"><a href="dataimport.html#moving-forward"><i class="fa fa-check"></i><b>6.5</b> Moving forward</a></li>
+<li class="chapter" data-level="4.2" data-path="dataimport.html"><a href="dataimport.html#data-types-in-r"><i class="fa fa-check"></i><b>4.2</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -200,78 +183,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dataimport" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Data importing and tidy data<a href="dataimport.html#dataimport" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The <code>bookdown</code> package and <a href="https://bookdown.org/yihui/bookdown/get-started.html">book</a> is definitely the best way to get started. However, in practice I always find myself copying an existing, working book and modifying it instead of starting from scratch. So this tutorial is going to have you do that as well, using this book as the one you copy from.</p>
-<p>[more setup here]</p>
-<p>You will have to name your book’s repository. To differentiate your book’s repo name from this “bookdown-tutorial” repo, here we’ll call your book “awesome-book” <em>but you should consistently name it what you want to name it</em>.</p>
-<div id="get-bookdown-tutorial-going-on-your-local-computer" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Get “bookdown-tutorial” going on your local computer<a href="dataimport.html#get-bookdown-tutorial-going-on-your-local-computer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Go to <a href="https://github.com/jules32/bookdown-tutorial" class="uri">https://github.com/jules32/bookdown-tutorial</a></li>
-<li>Click the green “clone or download” button and DOWNLOAD ZIP.</li>
-<li>Locally on your computer, unzip the folder, save it in a reasonable place</li>
-<li>Rename 2 things from “bookdown-tutorial” to “awesome-book”. You can do this in the finder/windows explorer:</li>
-</ol>
-<ul>
-<li>the folder itself (that you just unzipped)</li>
-<li>the .Rproj file</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>Double-click the .Rproj file to launch RStudio</li>
-<li>Install packages and restart</li>
-</ol>
-<ul>
-<li><code>install.packages("bookdown")</code><br />
-</li>
-<li><code>install.packages("usethis")</code><br />
-</li>
-<li>Use the menu item Session &gt; Restart R<br />
-</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>Click on the Build tab in the top right pane</li>
-<li>Click on Build Book!</li>
-</ol>
-<p>Nice job! Now let’s make it yours, and connect it to GitHub.</p>
+<div id="dataimport" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Data importing and tidy data<a href="dataimport.html#dataimport" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="load-in-a-dataset" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Load in a dataset<a href="dataimport.html#load-in-a-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Open this link in a new tab by copy-pasting and save it to your computer using right-click (<a href="https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv" class="uri">https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv</a>).
+Save it as “gapminder2017”.</p>
+<div id="comma-separated-csv" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> comma separated (csv)<a href="dataimport.html#comma-separated-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>try read it in using read csv, the file ending is automatically put on there, so even though you did not name it gapminder2017.csv, that is the name it will get.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dataimport.html#cb1-1" aria-hidden="true" tabindex="-1"></a>gapminder2017 <span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/241023_phdcourse/data/gapminder2017.csv&quot;</span>)</span></code></pre></div>
 </div>
-<div id="create-your-awesome-book-github-repo" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Create your “awesome-book” GitHub repo<a href="dataimport.html#create-your-awesome-book-github-repo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Go to your GitHub account: github.com/username</li>
-<li>Click on Repositories, and the green button “New” to create a new repo</li>
-<li>Name this new repo “awesome-book”</li>
-<li>DO NOT initialize this repo with a README</li>
-<li>Click the green “create repository” button — this will take you to your new repo</li>
-<li>Click the tiny “clone or download” button near the top and COPY URL</li>
-</ol>
+<div id="table-can-be-anything-that-has-table-structure" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> table (can be anything that has table structure)<a href="dataimport.html#table-can-be-anything-that-has-table-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>read.table</p>
+<p>library(gapminder)</p>
+<p>now load this dataset which has all the years, install it if you havent already</p>
 </div>
-<div id="turn-bookdown-tutorial-into-awesome-book" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Turn “bookdown-tutorial” into “awesome-book”<a href="dataimport.html#turn-bookdown-tutorial-into-awesome-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>The following is from Jenny Bryan’s <a href="https://happygitwithr.com/existing-github-last.html">Happy Git With R</a></em></p>
-<ol style="list-style-type: decimal">
-<li>Go back to RStudio, to your “awesome-book” project</li>
-<li>In the Console, type <code>usethis::use_git()</code> and say Yes to the two prompts. This will restart R and give you a new Git tab in the upper right pane.</li>
-<li>Now, click on the Terminal tab next to the Console tab.</li>
-<li>Type <code>git remote add origin &lt;paste your copied awesome-book github url here&gt;</code></li>
-<li>Type <code>git push --set-upstream origin master</code></li>
-</ol>
 </div>
-<div id="publish-awesome-book" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Publish “awesome-book”<a href="dataimport.html#publish-awesome-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Last steps!</p>
-<ol style="list-style-type: decimal">
-<li>Go back to github.com/username/“awesome-book” and refresh — our files should be there! But we want it to be a book published as <a href="https://username.github.io/awesome-book" class="uri">https://username.github.io/awesome-book</a>.</li>
-<li>Click Settings</li>
-<li>Scroll down to GitHub Settings</li>
-<li>Change the Source pulldown from “None” to “master branch /docs folder”</li>
-<li>It should say “Your site is ready to be published at <a href="https://username.github.io/awesome-book/" class="uri">https://username.github.io/awesome-book/</a>” — click the link to see!</li>
-</ol>
-<p>Now, you’re set — you just need to write your book.</p>
-</div>
-<div id="moving-forward" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Moving forward<a href="dataimport.html#moving-forward" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As you write your .Rmd files, build the book and commit all files, including the docs/ folder, and your published book will be updated!</p>
+<div id="data-types-in-r" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Data types in R<a href="dataimport.html#data-types-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Even though data types is a dull subject and therefore very hard to teach properly. It does serve an important purpose. Namely that you can figure out where error messages come from and which tools to use on which data</p>
 
 </div>
 </div>
@@ -280,7 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="under-the-hood-c-all-r-variables-are-vectors-arrays-or-lists.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dataintro.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
