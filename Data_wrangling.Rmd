@@ -2,7 +2,6 @@
 
 ![](https://andreashandel.github.io/MADAcourse/media/cartoonscrubdata.jpg)
 
-----
 ## Packages required
 
 The following packages are required. If you need to go back and check how installing a package is done see the section 3.5(#installpackages).   

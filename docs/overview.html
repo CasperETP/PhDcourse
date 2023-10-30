@@ -23,7 +23,7 @@
 <meta name="author" content="Casper-Emil Tingskov Pedersen and Jonathan Thorsen" />
 
 
-<meta name="date" content="2023-10-27" />
+<meta name="date" content="2023-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,16 +155,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#error-messages"><i class="fa fa-check"></i><b>3.3</b> Error messages</a></li>
 <li class="chapter" data-level="3.4" data-path="dataintro.html"><a href="dataintro.html#coding-tips-and-tricks"><i class="fa fa-check"></i><b>3.4</b> Coding tips and tricks</a></li>
-<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
+<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#installpackages"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>4</b> Data importing and tidy data</a>
+<li class="chapter" data-level="4" data-path="datawrangling.html"><a href="datawrangling.html"><i class="fa fa-check"></i><b>4</b> Data wrangling and tidy data</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="dataimport.html"><a href="dataimport.html#load-in-a-dataset"><i class="fa fa-check"></i><b>4.1</b> Load in a dataset</a>
+<li class="chapter" data-level="4.1" data-path="datawrangling.html"><a href="datawrangling.html#packages-required"><i class="fa fa-check"></i><b>4.1</b> Packages required</a></li>
+<li class="chapter" data-level="4.2" data-path="datawrangling.html"><a href="datawrangling.html#using-functions-of-the-penguins-dataset"><i class="fa fa-check"></i><b>4.2</b> Using functions of the penguins dataset</a></li>
+<li class="chapter" data-level="4.3" data-path="datawrangling.html"><a href="datawrangling.html#load-in-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>4.3</b> Load in a dataset from the internet</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="dataimport.html"><a href="dataimport.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.1.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="4.1.2" data-path="dataimport.html"><a href="dataimport.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.1.2</b> table (can be anything that has table structure)</a></li>
+<li class="chapter" data-level="4.3.1" data-path="datawrangling.html"><a href="datawrangling.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.3.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="datawrangling.html"><a href="datawrangling.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.3.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="dataimport.html"><a href="dataimport.html#data-types-in-r"><i class="fa fa-check"></i><b>4.2</b> Data types in R</a></li>
+<li class="chapter" data-level="4.4" data-path="datawrangling.html"><a href="datawrangling.html#data-types-in-r"><i class="fa fa-check"></i><b>4.4</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -188,8 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Yihaa you are commited to learning relevant coding using R. The world is now ready to become your oister.</p>
 <div id="what-can-you-expect" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> What can you expect<a href="overview.html#what-can-you-expect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this course you will learn how to code in R and it will be fun. You will learn efficient code and workflows that can be used in your own research and for various kinds of data, including all types of omics data.
-This is really powerful and will lead you to become a better scientist.</p>
+<p>In this course you will learn how to code in R and it will be fun. You will learn efficient code and workflows that can be used in your own research and for various kinds of data, including all types of omics data. This is really powerful and will lead you to become a better scientist.</p>
 </div>
 <div id="general-learning-outcomes" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> General learning outcomes<a href="overview.html#general-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -205,14 +206,12 @@ This is really powerful and will lead you to become a better scientist.</p>
 It has been developed by <a href="https://hadley.nz/">Hadley Wickham</a> and his team, please visit his website if you are interested in learning more.</p>
 <p><img src="https://ohi-science.org/data-science-training/img/r4ds_data-science.png" /></p>
 <p>We will be focusing on a combination of tools:</p>
-<p><u>Basic tools:</u>
--<strong>str/glimpse</strong>: Look at data</p>
+<p><u>Basic tools:</u> -<strong>str/glimpse</strong>: Look at data</p>
 <p><u>Tidytools:</u></p>
 <p>-<strong>Tidy</strong>: <code>tidyr</code> to organize rows of data into unique values.</p>
 <p>-<strong>Transform</strong>: <code>dplyr</code> to manipulate/wrangle data based on subsetting by rows or columns, sorting and joining.</p>
 <p>-<strong>Visualize</strong>: <code>ggplot2</code> static plots, using grammar of graphics principles</p>
-<p>This is essential - Instead of building your analyses around the format your data are in, take deliberate steps to make your data tidy. When your data are tidy, you can use a growing suite of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data.
-This will save you time since you aren’t reinventing the wheel, and will make your work more clear and understandable to your collaborators (most importantly, Future You).</p>
+<p>This is essential - Instead of building your analyses around the format your data are in, take deliberate steps to make your data tidy. When your data are tidy, you can use a growing suite of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data. This will save you time since you aren’t reinventing the wheel, and will make your work more clear and understandable to your collaborators (most importantly, Future You).</p>
 </div>
 <div id="working-with-data-that-is-not-your-own" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Working with data that is not your own<a href="overview.html#working-with-data-that-is-not-your-own" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -233,10 +232,8 @@ This will save you time since you aren’t reinventing the wheel, and will make 
 </div>
 <div id="prerequisites" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Prerequisites<a href="overview.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A few things need to be checked before we start. First, we assume that you have either <a href="https://cloud.r-project.org/">R</a> or
-<a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> installed.</p>
-<p>Also, if not already installed, please install the following packages:
-c(“dplyr”,“tidyverse”,“broom”,““)</p>
+<p>A few things need to be checked before we start. First, we assume that you have either <a href="https://cloud.r-project.org/">R</a> or <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> installed.</p>
+<p>Also, if not already installed, please install the following packages: c(“dplyr”,“tidyverse”,“broom”,““)</p>
 </div>
 <div id="credit" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Credit<a href="overview.html#credit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -294,7 +291,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["data.pdf"],
+"download": ["data course.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

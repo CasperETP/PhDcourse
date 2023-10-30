@@ -23,7 +23,7 @@
 <meta name="author" content="Casper-Emil Tingskov Pedersen and Jonathan Thorsen" />
 
 
-<meta name="date" content="2023-10-27" />
+<meta name="date" content="2023-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="overview.html"/>
-<link rel="next" href="dataimport.html"/>
+<link rel="next" href="datawrangling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -155,16 +155,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="dataintro.html"><a href="dataintro.html#error-messages"><i class="fa fa-check"></i><b>3.3</b> Error messages</a></li>
 <li class="chapter" data-level="3.4" data-path="dataintro.html"><a href="dataintro.html#coding-tips-and-tricks"><i class="fa fa-check"></i><b>3.4</b> Coding tips and tricks</a></li>
-<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#install-and-load-package"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
+<li class="chapter" data-level="3.5" data-path="dataintro.html"><a href="dataintro.html#installpackages"><i class="fa fa-check"></i><b>3.5</b> Install and load package</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="dataimport.html"><a href="dataimport.html"><i class="fa fa-check"></i><b>4</b> Data importing and tidy data</a>
+<li class="chapter" data-level="4" data-path="datawrangling.html"><a href="datawrangling.html"><i class="fa fa-check"></i><b>4</b> Data wrangling and tidy data</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="dataimport.html"><a href="dataimport.html#load-in-a-dataset"><i class="fa fa-check"></i><b>4.1</b> Load in a dataset</a>
+<li class="chapter" data-level="4.1" data-path="datawrangling.html"><a href="datawrangling.html#packages-required"><i class="fa fa-check"></i><b>4.1</b> Packages required</a></li>
+<li class="chapter" data-level="4.2" data-path="datawrangling.html"><a href="datawrangling.html#using-functions-of-the-penguins-dataset"><i class="fa fa-check"></i><b>4.2</b> Using functions of the penguins dataset</a></li>
+<li class="chapter" data-level="4.3" data-path="datawrangling.html"><a href="datawrangling.html#load-in-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>4.3</b> Load in a dataset from the internet</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="dataimport.html"><a href="dataimport.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.1.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="4.1.2" data-path="dataimport.html"><a href="dataimport.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.1.2</b> table (can be anything that has table structure)</a></li>
+<li class="chapter" data-level="4.3.1" data-path="datawrangling.html"><a href="datawrangling.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.3.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="datawrangling.html"><a href="datawrangling.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.3.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="dataimport.html"><a href="dataimport.html#data-types-in-r"><i class="fa fa-check"></i><b>4.2</b> Data types in R</a></li>
+<li class="chapter" data-level="4.4" data-path="datawrangling.html"><a href="datawrangling.html#data-types-in-r"><i class="fa fa-check"></i><b>4.4</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -201,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Graphical output: Where you can see figures that is produced by commands in the console.</p>
 <p><img src="https://sydney-informatics-hub.github.io/lessonbmc/fig/Rvariablesdata.jpg" /></p>
 <p>This figure shows some of the more important data types in R and how they relate to storing data in R.
-It seems simple when set up like this, but when you are coding and you need to find and error this figure is
+It seems simple when set up like this, but when you are coding and you need to find an error this figure is
 a good place to start.</p>
 <p>Vectors can be created by using the <code>c()</code> function in R. The c stands for concatenate.
 for example the following command creates a vector of integers 1,2,3,4:
@@ -220,7 +222,7 @@ you can look at your matrix by typing <code>my_matrix</code> in the console.</p>
 2 like this:
 <code>my_df[my_df$int &gt; 2,]</code> This will capture the last two rows of the data. Notice the comma, which is essential
 when indexing dataframes: everything before the comma is subsetting on rows while after the comma is for subsetting columns. We can also subset using equality using == (and NOT =, which is used for assignment). Here is an example using equality: <code>my_df[my_df$names == "Karl",]</code>.<br />
-The final example of a conditional is %in% which is not listed in the figure above but still very useful. This weirdly looking %in% is describing a function (which we will get back to and use later) which can search for overlaps e.g. in R:
+The final example of something similar to but not identical is a binary operator %in% which is not listed in the figure above but still very useful. This weirdly looking %in% is describing a operator (which we will get back to and use later) which can search for overlaps e.g. in R:
 <code>my_df[my_df$names %in% c("Karl","Villy"),]</code> See here that we find the overlap between names in my_df and the provided vector and only showing the rows of the data frame where there is an overlap.</p>
 <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200411225124/f114-300x158.png" /></p>
 <p>Functions, also called commands: Functions perform tasks in R. They take in inputs called arguments and return outputs. You can either manually specify a function’s arguments or use the function’s default values.
@@ -258,8 +260,8 @@ Otherwise, the text is just a message. Read it, wave back at R, and thank it for
 <p><em>The best way to learn to code is by doing:</em> Rather than learning to code for its own sake, we find that learning to code goes much smoother when you have a goal in mind or when you are working on a particular project, like analyzing data that you are interested in and that is important to you.<br />
 Practice is key!</p>
 </div>
-<div id="install-and-load-package" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Install and load package<a href="dataintro.html#install-and-load-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="installpackages" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Install and load package<a href="dataintro.html#installpackages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So we alluded to that the environment contains many objects and some of these objects come from packages. Packages
 in R is precalculated functions and useful tools to work with your data. Therefore, embrace packages and get familiar with some of them. Some of the more important ones we will use in this course are:
 <code>tidyverse</code> and <code>dplyr</code> for data massaging and wrangling and <code>ggplot 2</code> for visualizations.</p>
@@ -282,7 +284,7 @@ using this approach</p>
         </div>
       </div>
 <a href="overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dataimport.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datawrangling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -324,7 +326,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["data.pdf"],
+"download": ["data course.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

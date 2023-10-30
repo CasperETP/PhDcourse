@@ -135,7 +135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> output: bookdown::gitbook</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to this course</a></li>
 <li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Course overview</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="overview.html"><a href="overview.html#what-can-you-expect"><i class="fa fa-check"></i><b>2.1</b> What can you expect</a></li>
@@ -160,12 +160,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="datawrangling.html"><a href="datawrangling.html"><i class="fa fa-check"></i><b>4</b> Data wrangling and tidy data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="datawrangling.html"><a href="datawrangling.html#packages-required"><i class="fa fa-check"></i><b>4.1</b> Packages required</a></li>
-<li class="chapter" data-level="4.2" data-path="datawrangling.html"><a href="datawrangling.html#load-in-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>4.2</b> Load in a dataset from the internet</a>
+<li class="chapter" data-level="4.2" data-path="datawrangling.html"><a href="datawrangling.html#using-functions-of-the-penguins-dataset"><i class="fa fa-check"></i><b>4.2</b> Using functions of the penguins dataset</a></li>
+<li class="chapter" data-level="4.3" data-path="datawrangling.html"><a href="datawrangling.html#load-in-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>4.3</b> Load in a dataset from the internet</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="datawrangling.html"><a href="datawrangling.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.2.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="4.2.2" data-path="datawrangling.html"><a href="datawrangling.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.2.2</b> table (can be anything that has table structure)</a></li>
+<li class="chapter" data-level="4.3.1" data-path="datawrangling.html"><a href="datawrangling.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.3.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="datawrangling.html"><a href="datawrangling.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>4.3.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="datawrangling.html"><a href="datawrangling.html#data-types-in-r"><i class="fa fa-check"></i><b>4.3</b> Data types in R</a></li>
+<li class="chapter" data-level="4.4" data-path="datawrangling.html"><a href="datawrangling.html#data-types-in-r"><i class="fa fa-check"></i><b>4.4</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -187,7 +188,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="datawrangling" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Data wrangling and tidy data<a href="datawrangling.html#datawrangling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="https://andreashandel.github.io/MADAcourse/media/cartoonscrubdata.jpg" /></p>
-<hr />
 <div id="packages-required" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Packages required<a href="datawrangling.html#packages-required" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The following packages are required. If you need to go back and check how installing a package is done see the section 3.5(#installpackages).</p>
@@ -205,6 +205,7 @@ library(palmerpenguins).</p>
 <p>1.<code>left_join()</code> merge two data frames together using a key column. This function (along with its cousin functions <code>right_join()</code> and <code>join()</code> etc.) is the bread and butter of working with many data types that needs to be merged and analysed.</p>
 <ol style="list-style-type: decimal">
 <li><p><code>mutate()</code> construct/reconstruct a column using a newly defined column name. This function is useful to generate a new columns that modify existing ones often using a conditional to do so.</p></li>
+<li><p><code>count()</code> counts the n of each unique value in a column. Usefull to combine with mutate to see the counts of the newly constructed column.</p></li>
 <li><p><code>arrange()</code> reorder the rows of a dataframe. For example, sort the rows of a dataset in descending order of the column height.</p></li>
 <li><p><code>filter()</code> the rows of a dataframe based on a filter, e.g. thresholds. It is similar to the example shown in the introduction, where we used old school filtering on my_df dataframe <code>my_df[my_df$names %in% c("Karl","Villy"),]</code>. Using the filter function and pipes you can do it like this: <code>my_df %&gt;% filter(names %in% c("Karl","Villy"))</code>.</p></li>
 <li><p><code>summarise()</code> a dataframe using one or more of its columns/variables with a summary statistic. Such examples could be the median or the mean and an example look like this: <code>my_df %&gt;% summarise(mean = mean(Grades))</code>. This function can be very powerful when combined with the <code>group_by</code> function.</p></li>
@@ -219,33 +220,28 @@ library(palmerpenguins).</p>
 ##   &lt;chr&gt;             &lt;dbl&gt;
 ## 1 boy                  35
 ## 2 girl                 60</code></pre>
-<p>In this chapter, we’ll introduce a series of functions from the dplyr package for data wrangling that will allow you to take a data frame and “wrangle” it (transform it) to suit your needs. Such functions include:</p>
-<p>filter() a data frame’s existing rows to only pick out a subset of them. For example, the alaska_flights data frame.
-summarize() one or more of its columns/variables with a summary statistic. Examples of summary statistics include the median and interquartile range of temperatures as we saw in Section 2.7 on boxplots.
-group_by() its rows. In other words, assign different rows to be part of the same group. We can then combine group_by() with summarize() to report summary statistics for each group separately. For example, say you don’t want a single overall average departure delay dep_delay for all three origin airports combined, but rather three separate average departure delays, one computed for each of the three origin airports.
-mutate() its existing columns/variables to create new ones. For example, convert hourly temperature recordings from degrees Fahrenheit to degrees Celsius.
-arrange() its rows. For example, sort the rows of weather in ascending or descending order of temp.
-join() it with another data frame by matching along a “key” variable. In other words, merge these two data frames together.
-Notice how we used computer_code font to describe the actions we want to take on our data frames. This is because the dplyr package for data wrangling has intuitively verb-named functions that are easy to remember.</p>
 </div>
-<div id="load-in-a-dataset-from-the-internet" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Load in a dataset from the internet<a href="datawrangling.html#load-in-a-dataset-from-the-internet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="using-functions-of-the-penguins-dataset" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Using functions of the penguins dataset<a href="datawrangling.html#using-functions-of-the-penguins-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="load-in-a-dataset-from-the-internet" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Load in a dataset from the internet<a href="datawrangling.html#load-in-a-dataset-from-the-internet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Open this link in a new tab by copy-pasting and save it to your computer using right-click (<a href="https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv" class="uri">https://raw.githubusercontent.com/zief0002/miniature-garbanzo/main/data/gapminder.csv</a>).
 Save it as “gapminder2017”.</p>
-<div id="comma-separated-csv" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> comma separated (csv)<a href="datawrangling.html#comma-separated-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="comma-separated-csv" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> comma separated (csv)<a href="datawrangling.html#comma-separated-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>try read it in using read csv, the file ending is automatically put on there, so even though you did not name it gapminder2017.csv, that is the name it will get.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="datawrangling.html#cb3-1" aria-hidden="true" tabindex="-1"></a>gapminder2017 <span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/241023_phdcourse/data/gapminder2017.csv&quot;</span>)</span></code></pre></div>
 </div>
-<div id="table-can-be-anything-that-has-table-structure" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> table (can be anything that has table structure)<a href="datawrangling.html#table-can-be-anything-that-has-table-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="table-can-be-anything-that-has-table-structure" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> table (can be anything that has table structure)<a href="datawrangling.html#table-can-be-anything-that-has-table-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>read.table</p>
 <p>library(gapminder)</p>
 <p>now load this dataset which has all the years, install it if you havent already</p>
 </div>
 </div>
-<div id="data-types-in-r" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Data types in R<a href="datawrangling.html#data-types-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-types-in-r" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Data types in R<a href="datawrangling.html#data-types-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Even though data types is a dull subject and therefore very hard to teach properly. It does serve an important purpose. Namely that you can figure out where error messages come from and which tools to use on which data</p>
 <p>Now lets show an example of this:
 <code>my_df[seq(1,3),]</code></p>
@@ -289,7 +285,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jules32/bookdown-tutorial/edit/master/Data_and_importing_data.Rmd",
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/Data_wrangling.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -300,7 +296,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["data.pdf"],
+"download": ["data course.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

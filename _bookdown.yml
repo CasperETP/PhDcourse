@@ -6,6 +6,6 @@ rmd_files: [
   "index.Rmd",
   "Overview.Rmd",
   "basic_intro_data_in_R.Rmd",
-  "Data_and_importing_data.Rmd"]
+  "Data_wrangling.Rmd"]
 delete_merged_file: true 
 output_dir: "docs"
