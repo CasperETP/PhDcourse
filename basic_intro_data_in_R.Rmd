@@ -27,7 +27,7 @@ Graphical output: Where you can see figures that is produced by commands in the 
 ![](https://sydney-informatics-hub.github.io/lessonbmc/fig/Rvariablesdata.jpg)
 
 This figure shows some of the more important data types in R and how they relate to storing data in R. 
-It seems simple when set up like this, but when you are coding and you need to find and error this figure is
+It seems simple when set up like this, but when you are coding and you need to find an error this figure is
 a good place to start.
 
 Vectors can be created by using the ``` c()``` function in R. The c stands for concatenate.
@@ -55,7 +55,7 @@ For example, using the data frame from before, we can restrict rows to those tha
 2 like this:
 ``` my_df[my_df$int > 2,]``` This will capture the last two rows of the data. Notice the comma, which is essential
 when indexing dataframes: everything before the comma is subsetting on rows while after the comma is for subsetting columns. We can also subset using equality using == (and NOT =, which is used for assignment). Here is an example using equality: ``` my_df[my_df$names == "Karl",]```.  
-The final example of a conditional is %in% which is not listed in the figure above but still very useful. This weirdly looking %in% is describing a function (which we will get back to and use later) which can search for overlaps e.g. in R:
+The final example of something similar to but not identical is a binary operator %in% which is not listed in the figure above but still very useful. This weirdly looking %in% is describing a operator (which we will get back to and use later) which can search for overlaps e.g. in R:
 ``` my_df[my_df$names %in% c("Karl","Villy"),]``` See here that we find the overlap between names in my_df and the provided vector and only showing the rows of the data frame where there is an overlap.
 
 
@@ -64,6 +64,7 @@ The final example of a conditional is %in% which is not listed in the figure abo
 
 Functions, also called commands: Functions perform tasks in R. They take in inputs called arguments and return outputs. You can either manually specify a function’s arguments or use the function’s default values.
 For example, the function ```seq()``` in R generates a sequence of numbers. If you just run ```seq()``` it will return the value 1. That doesn’t seem very useful! This is because the default arguments are set as ```seq(from = 1, to = 1)```. Thus, if you don’t pass in different values for from and to to change this behavior, R just assumes all you want is the number 1. You can change the argument values by updating the values after the = sign. If we try out ```seq(from = 2, to = 5)``` we get the result 2 3 4 5 that we might expect.
+
 
 This list is by no means an exhaustive list of all the programming concepts and terminology needed to become a savvy R user; such a list would be so large it wouldn’t be very useful, especially for novices. Rather, we feel this is a minimally viable list of programming concepts and terminology you need to know before getting started. We feel that you can learn the rest as you go. Remember that your mastery of all of these concepts and terminology will build as you practice more and more.
 
@@ -108,7 +109,7 @@ Here are a few useful tips to keep in mind as you learn to program:
 *The best way to learn to code is by doing:* Rather than learning to code for its own sake, we find that learning to code goes much smoother when you have a goal in mind or when you are working on a particular project, like analyzing data that you are interested in and that is important to you.   
 Practice is key!
 
-## Install and load package
+## Install and load package {#installpackages}
 
 So we alluded to that the environment contains many objects and some of these objects come from packages. Packages
 in R is precalculated functions and useful tools to work with your data. Therefore, embrace packages and get familiar with some of them. Some of the more important ones we will use in this course are:
