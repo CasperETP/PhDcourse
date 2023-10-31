@@ -297,6 +297,10 @@ ggplot(summary, aes(x = factor(year_interval), y = avg_life_expectancy, fill = c
   scale_fill_brewer(palette = "Set1")  # Adjust the color palette as desired
 
 ```
+
+
+
+
 ### Your turn
 
 Exercise 4.  
