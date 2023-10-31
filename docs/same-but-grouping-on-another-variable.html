@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>The data-wrangling and omics course for R novices</title>
+  <title>Chapter 6 Same, but grouping on another variable | The data-wrangling and omics course for R novices</title>
   <meta name="description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="The data-wrangling and omics course for R novices" />
+  <meta property="og:title" content="Chapter 6 Same, but grouping on another variable | The data-wrangling and omics course for R novices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   <meta name="github-repo" content="openscapes/series" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The data-wrangling and omics course for R novices" />
+  <meta name="twitter:title" content="Chapter 6 Same, but grouping on another variable | The data-wrangling and omics course for R novices" />
   
   <meta name="twitter:description" content="A tutorial on how to do data-wrangling and analysing omics data" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="overview.html"/>
+<link rel="prev" href="get-summary-of-a-statistic.html"/>
+<link rel="next" href="grouping-on-more-than-one-variable.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,7 +135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to this course</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> output: bookdown::gitbook</a></li>
 <li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Course overview</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="overview.html"><a href="overview.html#what-can-you-expect"><i class="fa fa-check"></i><b>2.1</b> What can you expect</a></li>
@@ -168,18 +168,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="datawrangling.html"><a href="datawrangling.html#one-way-to-deal-with-missing-values"><i class="fa fa-check"></i><b>4.4</b> One way to deal with missing values</a>
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="datawrangling.html"><a href="datawrangling.html#your-turn"><i class="fa fa-check"></i><b>4.4.1</b> Your turn</a></li>
+<li class="chapter" data-level="4.4.2" data-path="datawrangling.html"><a href="datawrangling.html#missing-data"><i class="fa fa-check"></i><b>4.4.2</b> Missing data</a></li>
+<li class="chapter" data-level="4.4.3" data-path="datawrangling.html"><a href="datawrangling.html#section"><i class="fa fa-check"></i><b>4.4.3</b> </a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="datawrangling.html"><a href="datawrangling.html#back-to-the-future"><i class="fa fa-check"></i><b>4.5</b> Back to the future</a>
+</ul></li>
+<li class="chapter" data-level="5" data-path="get-summary-of-a-statistic.html"><a href="get-summary-of-a-statistic.html"><i class="fa fa-check"></i><b>5</b> Get summary of a statistic</a></li>
+<li class="chapter" data-level="6" data-path="same-but-grouping-on-another-variable.html"><a href="same-but-grouping-on-another-variable.html"><i class="fa fa-check"></i><b>6</b> Same, but grouping on another variable</a></li>
+<li class="chapter" data-level="7" data-path="grouping-on-more-than-one-variable.html"><a href="grouping-on-more-than-one-variable.html"><i class="fa fa-check"></i><b>7</b> Grouping on more than one variable</a></li>
+<li class="chapter" data-level="8" data-path="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><a href="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><i class="fa fa-check"></i><b>8</b> Remove pesky NAs from grouping vars and sort by mean_EPA_DHA</a>
 <ul>
-<li class="chapter" data-level="4.5.1" data-path="datawrangling.html"><a href="datawrangling.html#get-summary-of-a-statistic-but-grouping-on-another-variable"><i class="fa fa-check"></i><b>4.5.1</b> Get summary of a statistic, but grouping on another variable</a></li>
-<li class="chapter" data-level="4.5.2" data-path="datawrangling.html"><a href="datawrangling.html#grouping-on-more-than-one-variable"><i class="fa fa-check"></i><b>4.5.2</b> Grouping on more than one variable</a></li>
-<li class="chapter" data-level="4.5.3" data-path="datawrangling.html"><a href="datawrangling.html#remove-nas-sex-variable-and-sort-by-mean-body-size"><i class="fa fa-check"></i><b>4.5.3</b> Remove NAs sex variable and sort by mean body size</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="datawrangling.html"><a href="datawrangling.html#lets-look-at-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>4.6</b> Lets look at a dataset from the internet</a>
+<li class="chapter" data-level="8.1" data-path="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><a href="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html#load-in-a-dataset-from-the-internet"><i class="fa fa-check"></i><b>8.1</b> Load in a dataset from the internet</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="datawrangling.html"><a href="datawrangling.html#comma-separated-csv"><i class="fa fa-check"></i><b>4.6.1</b> comma separated (csv)</a></li>
-<li class="chapter" data-level="4.6.2" data-path="datawrangling.html"><a href="datawrangling.html#construct-new-date-variable-and-look-at-life-expectancy"><i class="fa fa-check"></i><b>4.6.2</b> Construct new date variable and look at life expectancy</a></li>
+<li class="chapter" data-level="8.1.1" data-path="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><a href="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html#comma-separated-csv"><i class="fa fa-check"></i><b>8.1.1</b> comma separated (csv)</a></li>
+<li class="chapter" data-level="8.1.2" data-path="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><a href="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html#table-can-be-anything-that-has-table-structure"><i class="fa fa-check"></i><b>8.1.2</b> table (can be anything that has table structure)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.2" data-path="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html"><a href="remove-pesky-nas-from-grouping-vars-and-sort-by-mean_epa_dha.html#data-types-in-r"><i class="fa fa-check"></i><b>8.2</b> Data types in R</a></li>
 </ul></li>
 </ul>
 
@@ -198,68 +201,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">The data-wrangling and omics course for R novices</h1>
-<p class="author"><em>Casper-Emil Tingskov Pedersen and Jonathan Thorsen</em></p>
-<p class="date"><em>2023-10-31</em></p>
-</div>
-<div id="welcome" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome to this course<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This course will introduce you to data-wrangling and analysis of omics data.
-We start out by building an intuition for working with data in R/Rstudio and then plot our results.</p>
-<p>The best way to learn is to follow along with your own laptop, but all are welcome. The idea with this course is also that you can do your own selv-paced learning by going back to themes that are harder.</p>
-<p>We’ll spend half the time with the lectures on the basic of R and data wrangling and half the time for you to try out wrangling yourself. You can also try some of the things you learn from the exercises on your own data.</p>
-<p>Before you begin, be sure you are all set up: see the prerequisites in #overview.</p>
-<p>Breakdown for the course:</p>
-<hr />
-<p><strong>Course schedule:</strong></p>
-<table>
-<colgroup>
-<col width="10%" />
-<col width="49%" />
-<col width="39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Time</th>
-<th align="left">Day1</th>
-<th align="left">Day2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">9-10:30</td>
-<td align="left">Data-Wrangling, an introduction</td>
-<td align="left">Modelling introduction and omics</td>
-</tr>
-<tr class="even">
-<td align="left">10:35-12</td>
-<td align="left">Get your hands dirty with data-wrangling</td>
-<td align="left">Your own catwalk with omics</td>
-</tr>
-<tr class="odd">
-<td align="left">13-14.30</td>
-<td align="left">GGplot2, an introduction</td>
-<td align="left">Machine learning introduction</td>
-</tr>
-<tr class="even">
-<td align="left">14.35-16</td>
-<td align="left">Plotting visually please plots</td>
-<td align="left">Omics and machine learning</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-
+<div id="same-but-grouping-on-another-variable" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Same, but grouping on another variable<a href="same-but-grouping-on-another-variable.html#same-but-grouping-on-another-variable" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>PUFA_data %&gt;%
+group_by(tPufa) %&gt;%
+summarize(
+mean_EPA_DHA =mean(EPA.DHA, na.rm=T),
+sd_EPA_DHA =sd(EPA.DHA, na.rm=T),
+n = n()
+)</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="get-summary-of-a-statistic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="grouping-on-more-than-one-variable.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -290,7 +248,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jules32/bookdown-tutorial/edit/master/index.Rmd",
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/Data_wrangling.Rmd",
 "text": "Edit"
 },
 "history": {
