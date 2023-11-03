@@ -2,17 +2,21 @@
 title: "The data-wrangling and omics course for R novices"
 author: "Casper-Emil Tingskov Pedersen and Jonathan Thorsen"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-# output: bookdown::gitbook
+output: pdf_document
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography:
+- book.bib
+- packages.bib
 biblio-style: apalike
 link-citations: yes
 github-repo: openscapes/series
 description: "A tutorial on how to do data-wrangling and analysing omics data"
+site: bookdown::bookdown_site
 ---
 
 # Welcome to this course {#welcome}
+
+![](Data_analyses2.jpeg){width=85%}
 
 This course will introduce you to data-wrangling and analysis of omics data.
 We start out by building an intuition for working with data in R/Rstudio and then plot our results.

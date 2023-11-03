@@ -1,6 +1,8 @@
 
 # Super quick intro to coding and data in R {#dataintro}
 
+![](Data_analyses.jpeg){width=75%}
+
 ## Coding/programming in R
 
 Now that you’re set up with R and RStudio, you are probably asking yourself, “OK. Now how do I use R?”. The first thing to note is that unlike other statistical software programs like Excel, SPSS, or Minitab that provide point-and-click interfaces, R is an interpreted language. This means you have to type in commands written in R code. In other words, you have to code/program in R. Note that we’ll use the terms “coding” and “programming” interchangeably throughout this course.
