@@ -26,7 +26,7 @@ In this course you will learn how to code in R and it will be fun. You will lear
 We will turning our data tidy and how to use a tidyverse suite of tools to work with tidy data.\
 It has been developed by [Hadley Wickham](https://hadley.nz/) and his team, please visit his website if you are interested in learning more.
 
-![](https://ohi-science.org/data-science-training/img/r4ds_data-science.png)
+![](r4ds_data-science.png)
 
 We will be focusing on a combination of tools:
 

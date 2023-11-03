@@ -13,7 +13,7 @@ While it is not required to be a seasoned coder/computer programmer to use R, th
 
 We now introduce some basic programming concepts and terminology. Instead of asking you to memorize all these concepts and terminology right now, we’ll guide you so that you’ll “learn by doing.” To help you learn, we will always use a different font to distinguish regular text from computer_code. Also we will go through a tiny bit of information and then ask you do a similar task on your computer.
 
-![](https://www.analyticsvidhya.com/wp-content/uploads/2016/02/rstudio.jpg)
+![](rstudio.jpg)
 
 
 On this plot you can see the overview of Rstudio. This contains the following elements:
@@ -26,7 +26,7 @@ R environment: What objects are registered/loaded in the environment (we will ge
 
 Graphical output: Where you can see figures that is produced by commands in the console. 
 
-![](https://sydney-informatics-hub.github.io/lessonbmc/fig/Rvariablesdata.jpg)
+![](Rvariablesdata.jpg)
 
 This figure shows some of the more important data types in R and how they relate to storing data in R. 
 It seems simple when set up like this, but when you are coding and you need to find an error this figure is
@@ -47,7 +47,7 @@ Data frames is a way to store data containing both strings, integers, factors to
 
 
 
-![](https://help.displayr.com/hc/article_attachments/6719912862607)
+![](r_operators.png)
 
 *Conditionals:*
 
@@ -61,7 +61,7 @@ The final example of something similar to but not identical is a binary operator
 ``` my_df[my_df$names %in% c("Karl","Villy"),]``` See here that we find the overlap between names in my_df and the provided vector and only showing the rows of the data frame where there is an overlap.
 
 
-![](https://media.geeksforgeeks.org/wp-content/uploads/20200411225124/f114-300x158.png)
+![](f114-300x158.png)
 
 
 Functions, also called commands: Functions perform tasks in R. They take in inputs called arguments and return outputs. You can either manually specify a function’s arguments or use the function’s default values.
@@ -88,7 +88,7 @@ One thing that intimidates new R and RStudio users is how it reports errors, war
 
 R will show red text in the console pane in three different situations:
 
-![](https://media.wired.com/photos/593257829be5e55af6c24476/master/w_2240,c_limit/trafficlight-inline.jpg)
+![](traffic-light-876050_1280.jpg)
 
 If the text starts with “Error”, figure out what’s causing it. Think of errors as a red traffic light: something is wrong!
 If the text starts with “Warning”, figure out if it’s something to worry about. For instance, if you get a warning about missing values in a scatterplot and you know there are missing values, you’re fine. If that’s surprising, look at your data and see what’s missing. Think of warnings as a yellow traffic light: everything is working fine, but watch out/pay attention.
@@ -100,7 +100,7 @@ Learning to code/program is quite similar to learning a foreign language. It can
 
 Here are a few useful tips to keep in mind as you learn to program:
 
-![](https://cdn.vox-cdn.com/thumbor/BKeBuV-Agjw4SaAA8Mbm1ptN7e0=/0x0:4032x3024/620x465/filters:focal(1693x1446:2337x2090):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59740845/sip_of_joy.17.jpg)
+![](gettyimages-840188212-1537556517.jpg)
 
 *Remember that computers are not actually that smart*: You may think your computer or smartphone is “smart,” but really people spent a lot of time and energy designing them to appear “smart.” In reality, you have to tell a computer everything it needs to do. Furthermore, the instructions you give your computer can’t have any mistakes in them, nor can they be ambiguous in any way.   
 
@@ -117,7 +117,7 @@ So we alluded to that the environment contains many objects and some of these ob
 in R is precalculated functions and useful tools to work with your data. Therefore, embrace packages and get familiar with some of them. Some of the more important ones we will use in this course are:
 ``` tidyverse ``` and ```dplyr``` for data massaging and wrangling and ```ggplot 2``` for visualizations.
 
-![](https://moderndive.netlify.app/images/shutterstock/R_vs_R_packages.png)
+![](R_vs_R_packages.png)
 
 So R is like a new mobile phone: while it has a certain amount of features when you use it for the first time, it doesn’t have everything. R packages are like the apps you can download onto your phone from Apple’s App Store or Android’s Google Play.
 

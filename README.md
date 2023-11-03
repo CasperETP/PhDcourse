@@ -1,5 +1,1 @@
-# bookdown-tutorial
-Mini tutorial for bookdown 
-
-
-afdafadjl
+# PhD Course in data wrangling and omics analyses

@@ -1,6 +1,6 @@
 # Data wrangling and tidy data {#datawrangling}
 
-![](https://andreashandel.github.io/MADAcourse/media/cartoonscrubdata.jpg)
+![](cartoonscrubdata.jpg)
 
 ## Packages required
 
@@ -85,7 +85,7 @@ my_df %>%
   summarise(median(Grades)) 
 ``` 
 
-![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+![](lter_penguins.png)
 
 ## Penguins!
 
