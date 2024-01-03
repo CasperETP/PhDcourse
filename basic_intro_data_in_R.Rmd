@@ -70,7 +70,7 @@ For example, the function ```seq()``` in R generates a sequence of numbers. If y
 
 This list is by no means an exhaustive list of all the programming concepts and terminology needed to become a savvy R user; such a list would be so large it wouldn’t be very useful, especially for novices. Rather, we feel this is a minimally viable list of programming concepts and terminology you need to know before getting started. We feel that you can learn the rest as you go. Remember that your mastery of all of these concepts and terminology will build as you practice more and more.
 
-### Your turn {#exercise1}
+### Your turn{#ex1}
 
 Exercise 1.
 
@@ -135,4 +135,19 @@ and to load it subsequently, write ``` library(tidyverse) ```.
 
 Now install ``` broom ``` , ``` tidyverse ```  and ``` dplyr ```
 using this approach
+
+
+## Exercise answers
+
+The answer to [exercise 1](#ex1) can be seen here:
+```{r eval=F,echo=T}
+my_data <- data.frame(
+  names = c("Villy", "Søren", "Karl", "Benny", "Siri"),
+  Grades = c(100, 20, 40, 30, 60)) 
+``` 
+
+```{r eval=F,echo=T}
+mean(my_data[my_data$Grades > 30,]$Grades,na.rm=T) 
+```
+
 
